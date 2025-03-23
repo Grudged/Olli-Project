@@ -10,7 +10,7 @@ import { HeaderComponent } from "./header/header.component";
   selector: 'app-root',
   imports: [RouterOutlet, AboutAuthorComponent, InTheWorksComponent, FooterComponent, SketchesComponent, HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Olli-Project';
