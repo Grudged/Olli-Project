@@ -9,9 +9,17 @@ body {
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(#303b37, #1a1f1d);
+  background: radial-gradient(#1e4372, #80732a);
   color: #e1eeeb;
   min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .center {
