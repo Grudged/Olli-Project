@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { AboutAuthorComponent } from "./about-author/about-author.component";
 import { InTheWorksComponent } from "./in-the-works/in-the-works.component";
 import { FooterComponent } from "./footer/footer.component";
+import { SketchesComponent } from "./sketches/sketches.component";
+import { HeaderComponent } from "./header/header.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AboutAuthorComponent, InTheWorksComponent, FooterComponent],
+  imports: [RouterOutlet, AboutAuthorComponent, InTheWorksComponent, FooterComponent, SketchesComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
