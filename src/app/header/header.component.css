@@ -7,10 +7,10 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 135%; /* Increased width slightly */
-  transform: translateX(-7%); /* Shifted to the left */
-  max-width: 50rem;
-  margin: 0 auto 2rem auto;
+  width: 200%; /* Increased width slightly */
+  transform: translate(-35px, 0); /* Shifted to the left */
+  max-width: 60rem;
+  margin: -16rem auto 2rem auto; /* Adjusted margin to move it up */
   text-align: center;
   background: rgba(185, 171, 141); /* Semi-transparent background */
   padding: 1rem;
