@@ -1,7 +1,11 @@
-<body>
-  <div class="content">
+<div style="min-height: 100vh; display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: flex-end;">
     <app-header></app-header>
   </div>
-  <router-outlet></router-outlet>
-</body>
-<app-footer></app-footer>
+  <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+    <router-outlet></router-outlet>
+  </div>
+  <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+    <app-footer></app-footer>
+  </div>
+</div>

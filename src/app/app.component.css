@@ -12,9 +12,10 @@
   z-index: 1; 
 }
 
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  position: relative;
+  padding: 0;
 }
 
 .overlay-image {
@@ -24,13 +25,9 @@ body {
 }
 
 .content {
-  position: absolute;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .info {
@@ -42,3 +39,12 @@ body {
   left: 50%;
   transform: translate(-50%, 50%);
 }
+
+.main-content {
+  flex: 1; /* This makes main-content take up all available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+

@@ -7,17 +7,18 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 100%; /* Increased width slightly */
+  width: 100%;
   max-width: 60rem;
+  margin: 0 auto; /* <-- Add this line */
   text-align: center;
-  background: rgba(185, 171, 141, .8); /* Semi-transparent background */
+  background: rgba(185, 171, 141, .8);
   padding: 1rem;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-  }
+}
   
   img {
     width: 3.5rem;
