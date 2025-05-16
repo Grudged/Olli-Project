@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { AboutAuthorComponent } from "./about-author/about-author.component";
 import { InTheWorksComponent } from "./in-the-works/in-the-works.component";
 import { FooterComponent } from "./footer/footer.component";
@@ -15,15 +15,14 @@ import { HeaderComponent } from "./header/header.component";
 })
 export class AppComponent {
   title = 'Olli-Project';
-  router: any;
+  currentUrl: any;
 
-  constructor() {
-    console.log('AppComponent initialized');
-    this.router = {
-      navigate: (path: string) => {
-        console.log(`Navigating to ${path}`);
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.currentUrl = event.url;
+        console.log('Current URL:', this.currentUrl);
       }
-    };
-    console.log(this.router);
+    });
   }
 }
