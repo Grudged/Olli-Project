@@ -14,7 +14,7 @@ export const routes: Routes = [
   { path: 'artwork', component: SketchesComponent }, // Show sketches for artwork
   { path: 'contact', component: ContactComponent }, // Contact page
   // ...other routes
-  { path: '', redirectTo: 'path', pathMatch: 'full' }, // default route
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // default route
 ];
 
 @NgModule({
