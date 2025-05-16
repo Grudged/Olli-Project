@@ -1,1 +1,72 @@
-<p>contact works!</p>
+<div class="inquiry-section">
+  <!-- background image + dark overlay -->
+  <div class="bg-image"></div>
+  <div class="overlay"></div>
+
+  <!-- two forms, side by side -->
+  <div class="forms-container">
+    <!-- Send Message form -->
+    <div class="form-block">
+      <h2 class="form-title">Send Message</h2>
+      <form class="inquiry-form">
+        <input
+          name="name"
+          ngModel
+          required
+          placeholder="Name"
+          class="inquiry-input"
+        />
+        <input
+          type="email"
+          name="email"
+          ngModel
+          required
+          placeholder="Email"
+          class="inquiry-input"
+        />
+        <textarea
+          name="message"
+          ngModel
+          required
+          placeholder="Message"
+          rows="4"
+          class="inquiry-textarea"
+        ></textarea>
+        <button type="submit" class="btn-whisper">
+          Send a Whisper
+        </button>
+      </form>
+      <p class="disclaimer">
+        (Messages go directly to A.M. Oakley’s inbox.)
+      </p>
+    </div>
+
+    <!-- Join Email List form -->
+    <div class="form-block">
+      <h2 class="form-title">Join the Email List</h2>
+      <form class="inquiry-form">
+        <input
+          name="name"
+          ngModel
+          required
+          placeholder="Name"
+          class="inquiry-input"
+        />
+        <input
+          type="email"
+          name="email"
+          ngModel
+          required
+          placeholder="Email"
+          class="inquiry-input"
+        />
+        <button type="submit" class="btn-lantern">
+          Light the Lantern
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- bottom tagline -->
+  <h3 class="bottom-tagline">Professional Inquiries</h3>
+</div>
