@@ -28,12 +28,20 @@ import { FormsModule } from '@angular/forms';
 export class AgentLoginDialogComponent {
   username = '';
   password = '';
+  storedUsername = 'agentAdmin'; // Set your stored username here
+  storedPassword = 'password123'; // Set your stored password here
+  isLoggedIn = false;
 
   constructor(private dialogRef: MatDialogRef<AgentLoginDialogComponent>) {}
 
   login() {
-    // Add your login logic here
-    this.dialogRef.close({ username: this.username, password: this.password });
+    if (this.username === this.storedUsername && this.password === this.storedPassword) {
+      this.isLoggedIn = true;
+      this.dialogRef.close({ username: this.username, isLoggedIn: this.isLoggedIn });
+    } else {
+      this.isLoggedIn = false;
+      // Optionally, show an error message here
+    }
   }
 
   close() {
