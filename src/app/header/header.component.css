@@ -11,7 +11,7 @@ header {
   max-width: 60rem;
   margin: 0 auto; /* <-- Add this line */
   text-align: center;
-  background: rgba(185, 171, 141, .8);
+  background: rgba(0, 0, 0, 0.4);
   padding: 1rem;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;

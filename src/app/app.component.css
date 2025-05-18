@@ -48,3 +48,7 @@ html, body {
   justify-content: flex-start;
 }
 
+.background-image {
+  transition: background-image 0.5s;
+  pointer-events: none;
+}
