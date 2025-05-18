@@ -12,7 +12,7 @@ import { AgentLoginDialogComponent } from '../agent-login-dialog/agent-login-dia
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  public isLoggedIn: boolean = false;
+  public isLoggedIn: boolean = localStorage.getItem('isLoggedIn') === 'true';
 
   constructor(private dialog: MatDialog) {}
 
@@ -25,4 +25,9 @@ export class HomeComponent {
       }
     });
   }
+
+    logOff() {
+      localStorage.removeItem('isLoggedIn');
+      this.isLoggedIn = false;
+    }
 }

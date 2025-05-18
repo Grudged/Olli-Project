@@ -25,9 +25,9 @@ constructor(private router: Router) {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
         // Set background image based on route
-        if (this.currentUrl === '/about') {
+        if (this.currentUrl === '/home' || this.currentUrl === '/') {
           this.backgroundStyle = {
-            backgroundImage: "url('assets/about.jpg')",
+            backgroundImage: "url('assets/whimsy.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'fixed',
@@ -37,9 +37,9 @@ constructor(private router: Router) {
             height: '100vh',
             zIndex: '-1'
           };
-        } else if (this.currentUrl === '/home' || this.currentUrl === '/') {
+        } else if (this.currentUrl === '/about' || this.currentUrl === '/') {
           this.backgroundStyle = {
-            backgroundImage: "url('assets/whimsy.jpg')",
+            backgroundImage: "url('assets/about.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'fixed',

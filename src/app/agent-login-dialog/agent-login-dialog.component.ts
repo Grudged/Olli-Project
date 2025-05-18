@@ -37,9 +37,13 @@ export class AgentLoginDialogComponent {
   login() {
     if (this.username === this.storedUsername && this.password === this.storedPassword) {
       this.isLoggedIn = true;
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('username', this.username);
       this.dialogRef.close({ username: this.username, isLoggedIn: this.isLoggedIn });
     } else {
       this.isLoggedIn = false;
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('username');
       // Optionally, show an error message here
     }
   }
