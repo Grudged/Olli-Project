@@ -1,11 +1,13 @@
-<div style="min-height: 100vh; display: flex; flex-direction: column;">
-  <div style="display: flex; justify-content: flex-end;">
-    <app-header></app-header>
-  </div>
-  <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-    <router-outlet></router-outlet>
-  </div>
-  <div *ngIf="currentUrl === '/home'" style="flex: 1; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 100px;">
-    <app-footer></app-footer>
+<div [ngStyle]="backgroundStyle" class="background-image" style="pointer-events: none;">
+  <div style="min-height: 100vh; display: flex; flex-direction: column; pointer-events: auto;">
+    <div style="display: flex; justify-content: flex-end;">
+      <app-header></app-header>
+    </div>
+    <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+      <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="currentUrl === '/home'" style="flex: 1; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 100px;">
+      <app-footer></app-footer>
+    </div>
   </div>
 </div>

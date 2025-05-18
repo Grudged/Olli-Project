@@ -2,7 +2,8 @@
   position: relative;
   padding: 4rem 2rem;
   text-align: center;
-  color: #f5d064; // golden text
+  /* color: #f5d064; // golden text */
+  color: whotesmoke;
 
   .bg-image {
     position: absolute;
@@ -25,7 +26,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 9rem;
   }
 
   .form-block {
@@ -37,7 +38,7 @@
     .form-title {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      font-family: 'Cinzel', serif; // or whatever your custom font is
+      font-family: 'Cinzel', serif; /*  or whatever your custom font is */
     }
 
     .inquiry-form {
