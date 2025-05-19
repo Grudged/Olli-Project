@@ -61,6 +61,30 @@ constructor(private router: Router) {
             height: '100vh',
             zIndex: '-1'
           };
+        } else if (this.currentUrl === '/book') {
+          this.backgroundStyle = {
+            backgroundImage: "url('assets/book.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100vw',
+            height: '100vh',
+            zIndex: '-1'
+          };
+        } else if (this.currentUrl === '/artwork') {
+          this.backgroundStyle = {
+            backgroundImage: "url('assets/synopsis.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100vw',
+            height: '100vh',
+            zIndex: '-1'
+          };
         } else {
           this.backgroundStyle = {};
         }
