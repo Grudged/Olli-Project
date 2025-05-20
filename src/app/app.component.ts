@@ -20,73 +20,73 @@ export class AppComponent {
   currentUrl: any;
   backgroundStyle: SafeStyle = '';
 
-constructor(private router: Router, private sanitizer: DomSanitizer) {
+constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
         // Set background image based on route
         if (this.currentUrl === '/home' || this.currentUrl === '/') {
-          this.backgroundStyle = this.sanitizer.bypassSecurityTrustStyle(
-            "background-image: url('assets/whimsy.jpg');" +
-            "background-size: cover;" +
-            "background-position: center;" +
-            "position: fixed;" +
-            "top: 0;" +
-            "left: 0;" +
-            "width: 100vw;" +
-            "height: 100vh;" +
-            "z-index: -1;"
-          );
+          this.backgroundStyle = {
+            backgroundImage: "url('assets/whimsy.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100vw',
+            height: '100vh',
+            zIndex: '-1'
+          };
         } else if (this.currentUrl === '/about' || this.currentUrl === '/') {
-          this.backgroundStyle = this.sanitizer.bypassSecurityTrustStyle(
-            "background-image: url('assets/about.jpg');" +
-            "background-size: cover;" +
-            "background-position: center;" +
-            "position: fixed;" +
-            "top: 0;" +
-            "left: 0;" +
-            "width: 100vw;" +
-            "height: 100vh;" +
-            "z-index: -1;"
-          );
+          this.backgroundStyle = {
+            backgroundImage: "url('assets/about.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100vw',
+            height: '100vh',
+            zIndex: '-1'
+          };
         } else if (this.currentUrl === '/contact') {
-          this.backgroundStyle = this.sanitizer.bypassSecurityTrustStyle(
-            "background-image: url('assets/contact.jpg');" +
-            "background-size: cover;" +
-            "background-position: center;" +
-            "position: fixed;" +
-            "top: 0;" +
-            "left: 0;" +
-            "width: 100vw;" +
-            "height: 100vh;" +
-            "z-index: -1;"
-          );
+          this.backgroundStyle = {
+            backgroundImage: "url('assets/contact.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100vw',
+            height: '100vh',
+            zIndex: '-1'
+          };
         } else if (this.currentUrl === '/book') {
-          this.backgroundStyle = this.sanitizer.bypassSecurityTrustStyle(
-            "background-image: url('assets/book.jpg');" +
-            "background-size: cover;" +
-            "background-position: center;" +
-            "position: fixed;" +
-            "top: 0;" +
-            "left: 0;" +
-            "width: 100vw;" +
-            "height: 100vh;" +
-            "z-index: -1;"
-          );
+          this.backgroundStyle = {
+            backgroundImage: "url('assets/book.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100vw',
+            height: '100vh',
+            zIndex: '-1'
+          };
         } else if (this.currentUrl === '/artwork') {
-          this.backgroundStyle = this.sanitizer.bypassSecurityTrustStyle(
-            "background-image: url('assets/synopsis.jpg');" +
-            "background-size: cover;" +
-            "background-position: center;" +
-            "position: fixed;" +
-            "top: 0;" +
-            "left: 0;" +
-            "width: 100vw;" +
-            "height: 100vh;" +
-            "z-index: -1;"
-          );
+          this.backgroundStyle = {
+            backgroundImage: "url('assets/synopsis.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100vw',
+            height: '100vh',
+            zIndex: '-1'
+          };
         } else {
-          this.backgroundStyle = this.sanitizer.bypassSecurityTrustStyle("");
+          this.backgroundStyle = {};
         }
       }
     });
