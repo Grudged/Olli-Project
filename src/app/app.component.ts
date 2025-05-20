@@ -51,7 +51,7 @@ constructor(private router: Router, private sanitizer: DomSanitizer) {
           );
         } else if (this.currentUrl === '/contact') {
           this.backgroundStyle = this.sanitizer.bypassSecurityTrustStyle(
-            "background-image: url('assets/contact.png');" +
+            "background-image: url('assets/contact.jpg');" +
             "background-size: cover;" +
             "background-position: center;" +
             "position: fixed;" +
@@ -63,7 +63,7 @@ constructor(private router: Router, private sanitizer: DomSanitizer) {
           );
         } else if (this.currentUrl === '/book') {
           this.backgroundStyle = this.sanitizer.bypassSecurityTrustStyle(
-            "background-image: url('assets/book.png');" +
+            "background-image: url('assets/book.jpg');" +
             "background-size: cover;" +
             "background-position: center;" +
             "position: fixed;" +
@@ -75,7 +75,7 @@ constructor(private router: Router, private sanitizer: DomSanitizer) {
           );
         } else if (this.currentUrl === '/artwork') {
           this.backgroundStyle = this.sanitizer.bypassSecurityTrustStyle(
-            "background-image: url('assets/synopsis.png');" +
+            "background-image: url('assets/synopsis.jpg');" +
             "background-size: cover;" +
             "background-position: center;" +
             "position: fixed;" +
