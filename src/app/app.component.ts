@@ -61,7 +61,7 @@ constructor(private router: Router) {
             height: '100vh',
             zIndex: '-1'
           };
-        } else if (this.currentUrl === '/book') {
+        } else if (this.currentUrl === '/in-the-works') {
           this.backgroundStyle = {
             backgroundImage: "url('assets/book.jpg')",
             backgroundSize: 'cover',
