@@ -5,12 +5,12 @@
   /* color: #f5d064; // golden text */
   color: whotesmoke;
 
-  .bg-image {
+  /* .bg-image {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url('/assets/forest-bg.jpg') center/cover no-repeat;
+    background: url('/assets/contact.png') center/cover no-repeat;
     z-index: 0;
-  }
+  } */
 
   .overlay {
     position: absolute;
