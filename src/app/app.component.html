@@ -1,4 +1,4 @@
-<div [ngStyle]="backgroundStyle" class="background-image" style="pointer-events: none;">
+<div [ngStyle]="backgroundStyle" class="background-image" [ngClass]="backgroundFadeClass" style="pointer-events: none;">
   <div style="min-height: 100vh; display: flex; flex-direction: column; pointer-events: auto;">
     <div style="display: flex; justify-content: flex-end;">
       <app-header></app-header>
