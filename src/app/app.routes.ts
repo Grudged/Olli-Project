@@ -8,13 +8,12 @@ import { ContactComponent } from './contact/contact.component';
 // ...import other components
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutAuthorComponent },
-  { path: 'in-the-works', component: InTheWorksComponent },
-  { path: 'artwork', component: SketchesComponent }, // Show sketches for artwork
-  { path: 'contact', component: ContactComponent }, // Contact page
-  // ...other routes
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // default route
+  { path: 'home', component: HomeComponent, data: { backgroundClass: 'bg-home' } },
+  { path: 'about', component: AboutAuthorComponent, data: { backgroundClass: 'bg-about' } },
+  { path: 'in-the-works', component: InTheWorksComponent, data: { backgroundClass: 'bg-book' } },
+  { path: 'artwork', component: SketchesComponent, data: { backgroundClass: 'bg-artwork' } },
+  { path: 'contact', component: ContactComponent, data: { backgroundClass: 'bg-contact' } },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

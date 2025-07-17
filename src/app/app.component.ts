@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
-import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+import { RouterOutlet, Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { AboutAuthorComponent } from "./about-author/about-author.component";
 import { InTheWorksComponent } from "./in-the-works/in-the-works.component";
 import { FooterComponent } from "./footer/footer.component";
@@ -18,82 +17,31 @@ import { HeaderComponent } from "./header/header.component";
 export class AppComponent {
   title = 'A.M. Oakley - Author';
   currentUrl: any;
-  backgroundStyle: SafeStyle = '';
-  backgroundFadeClass = 'fade-in';
+  backgroundClass = 'bg-home';
 
-constructor(private router: Router) {
+  constructor(private router: Router) {
+    // Set initial background based on current route
+    this.setBackgroundClass(this.router.url);
+    
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.backgroundFadeClass = 'fade-out';
-        setTimeout(() => {
-          this.currentUrl = event.urlAfterRedirects;
-          // Set background image based on route
-          if (this.currentUrl === '/home' || this.currentUrl === '/') {
-            this.backgroundStyle = {
-              backgroundImage: "url('assets/whimsy.jpg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              position: 'fixed',
-              top: '0',
-              left: '0',
-              width: '100vw',
-              height: '100vh',
-              zIndex: '-1'
-            };
-          } else if (this.currentUrl === '/about' || this.currentUrl === '/') {
-            this.backgroundStyle = {
-              backgroundImage: "url('assets/about.jpg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              position: 'fixed',
-              top: '0',
-              left: '0',
-              width: '100vw',
-              height: '100vh',
-              zIndex: '-1'
-            };
-          } else if (this.currentUrl === '/contact') {
-            this.backgroundStyle = {
-              backgroundImage: "url('assets/contact.jpg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              position: 'fixed',
-              top: '0',
-              left: '0',
-              width: '100vw',
-              height: '100vh',
-              zIndex: '-1'
-            };
-          } else if (this.currentUrl === '/in-the-works') {
-            this.backgroundStyle = {
-              backgroundImage: "url('assets/book.jpg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              position: 'fixed',
-              top: '0',
-              left: '0',
-              width: '100vw',
-              height: '100vh',
-              zIndex: '-1'
-            };
-          } else if (this.currentUrl === '/artwork') {
-            this.backgroundStyle = {
-              backgroundImage: "url('assets/synopsis.jpg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              position: 'fixed',
-              top: '0',
-              left: '0',
-              width: '100vw',
-              height: '100vh',
-              zIndex: '-1'
-            };
-          } else {
-            this.backgroundStyle = {};
-          }
-          this.backgroundFadeClass = 'fade-in';
-        }, 300);
+        this.currentUrl = event.urlAfterRedirects;
+        this.setBackgroundClass(event.urlAfterRedirects);
       }
     });
+  }
+
+  private setBackgroundClass(url: string) {
+    // Map routes to background classes
+    const routeBackgroundMap: { [key: string]: string } = {
+      '/home': 'bg-home',
+      '/': 'bg-home',
+      '/about': 'bg-about',
+      '/contact': 'bg-contact',
+      '/in-the-works': 'bg-book',
+      '/artwork': 'bg-artwork'
+    };
+
+    this.backgroundClass = routeBackgroundMap[url] || 'bg-home';
   }
 }
